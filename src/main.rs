@@ -1,10 +1,10 @@
 use bevy::prelude::*;
 mod forces;
-use forces::plugin::ForcesPlugin;
+use forces::defaultplugin::DefaultForcesPlugin;
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_plugins(ForcesPlugin)
+        .add_plugins(DefaultForcesPlugin)
         .run();
 }
