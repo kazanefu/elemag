@@ -10,5 +10,7 @@ impl Plugin for DefaultForcesPlugin {
         app.add_plugins(plugin::ForcesPlugin);
         register_force::<gravity::Gravity>(app);
         register_force::<drag::Drag>(app);
+        app.add_plugins(point_charge::PointChargePlugin);
+        register_force::<point_charge::PointCharge>(app);
     }
 }
